@@ -1,0 +1,90 @@
+ion-content{
+    --background: #e0dfe6;
+    #header{
+        height: 33%;
+        background: linear-gradient(90deg, #dfb62f 0%, #F39200 100%);
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        padding: 20px;
+
+        #app-bar{
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            ion-icon{
+                font-size: 24px;
+                margin-left: -5px;
+            }
+      
+        }
+        #logo{
+            position: absolute;
+            top: 10%;
+            left: 40%;
+        right: 40%;
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            display: block;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            // align-self: center;
+            img{
+                width: 70%;
+            }
+         }  
+    }
+    .wrapper{
+        position: absolute;
+        top: 24%;
+        left: 4%;
+        right: 4%;
+        .form-wrapper{
+            box-shadow: none;
+            border-radius: 20px;
+            
+        }
+        .socials{
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+            
+            
+            ion-icon{
+                font-size: 25px;
+            }
+        }
+        .btn-f{
+           --background : rgb(238, 204, 204);
+          
+          
+           --padding-start: 12px ;
+           --padding-end: 12px ;
+        }
+        .btn-log{
+            --background:rgb(238, 204, 204);
+           
+                // height: 50px;
+                // width: 50px;
+                --padding-start: 12px ;
+                --padding-end: 12px ;
+        }
+    }
+    .form-wrappe{
+        box-shadow: none;
+        border-radius: 20px;
+       margin-left: 6%;
+       margin-right: 6%;
+    }
+    .for{
+        margin-top: 20%;
+    }
+
+}

@@ -1,11 +1,12 @@
-::-webkit-scrollbar, *::-webkit-scrollbar {
-    display: none;
-    overflow: hidden;
-  }
+// ::-webkit-scrollbar, *::-webkit-scrollbar {
+//     display: none;
+//     overflow: hidden;
+//   }
   
   ion-content {
     overflow: hidden;
     --overflow: hidden;
+    --background:  url("/assets/images/depo.jpg") no-repeat center center / cover;
   }
   
   .scroll-content {
@@ -13,8 +14,10 @@
   }
   
   ion-list {
-    background: transparent;
-    transform: translateY(20vh);
+    margin: 0 4vh;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 0 var(--ion-color-medium);
+    
     ion-item {
       border: 1px solid var(--ion-color-medium);
       border-radius: 10px;
@@ -39,6 +42,7 @@
     .signup {
       margin-top: 5vh;
       font-size: 0.8rem;
+      
     }
     
     ion-col {

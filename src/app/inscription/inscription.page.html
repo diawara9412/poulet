@@ -1,21 +1,33 @@
+<ion-header >
+
+    
+  
+</ion-header>
 <ion-content [fullscreen]="true"> 
+  <ion-fab slot="fixed" vertical="top" horizontal="start">
+    <ion-icon name="arrow-back-outline" style="font-size: 30px;" (click)="retour()" ></ion-icon>
+    
+  </ion-fab>
+  
     <div>
-      <img style="width: 150px; display: block; margin: auto;" src="assets/images/poulet2.png" />
+    
+      <img style="width: 200px; display: block; margin: auto;" src="assets/images/poulet2.png"/>
     </div>
      
     <ion-list lines="none" class="ion-padding ion-text-center">
-      <ion-card class="">
-        <ion-card-content>
-          <!-- <form> -->
-            <ion-input 
-              fill="outline"
-              label="Username" 
-              labelPlacement="stacked"
-              placeholder="Fill your username">
-            </ion-input>
+      <!-- <ion-card class="" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; display: block; margin: auto; width: 300px;" >
+        <ion-card-content> -->
+          <form>
+            <ion-item class="ion-margin-vertical">
+              <ion-icon name="person-outline" slot="end" color="primary"></ion-icon>
+              <ion-input 
+                
+                placeholder="Nom d'utilisateur">
+              </ion-input>
+            </ion-item>
         <!-- <ion-item class="ion-margin-vertical">
           <ion-icon 
-            name="person-outline" slot="end" color="medium">
+            name="person-outline" slot="end" color="primary">
           </ion-icon>
           <ion-input 
             
@@ -26,11 +38,11 @@
 
         <ion-item class="ion-margin-vertical">
           <ion-icon 
-            name="mail-outline" slot="end" color="medium">
+            name="mail-outline" slot="end" color="primary">
           </ion-icon>
           <ion-input 
             
-            placeholder="Enter Email Address">
+            placeholder="Identifiant">
           </ion-input>
         </ion-item>
       
@@ -38,12 +50,12 @@
           <ion-icon (click)="onChange()"
             [name]="isTypePassword ? 'lock-closed-outline' : 'lock-open-outline'" 
             slot="end" 
-            [color]="isTypePassword ? 'medium' : 'primary'">
+            [color]="isTypePassword ? 'primary' : 'primary'">
           </ion-icon>
           <ion-input 
             
             [type]="isTypePassword ? 'password' : 'text'"
-            placeholder="Enter Password">
+            placeholder=" Mot de passe">
           </ion-input>
         </ion-item>
         
@@ -57,9 +69,14 @@
             </div>
           </ion-col>
         </ion-row>
-        <ion-button color="primary" shape="round" >Sign Up</ion-button>
-    <!-- </form> -->
-    </ion-card-content>
-    </ion-card>
+        <ion-button color="primary" shape="round" >Inscrire</ion-button>
+    </form>
+    <!-- </ion-card-content>
+    </ion-card> -->
     </ion-list>
 </ion-content>
+<ion-footer>
+  <div class="circleBase type4 circle3"></div>
+  <div class="circleBase type3"></div>
+  <!-- <div class="circleBase type4 circle4"></div> -->
+</ion-footer>

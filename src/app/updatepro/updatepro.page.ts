@@ -2,30 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-updatepro',
+  templateUrl: './updatepro.page.html',
+  styleUrls: ['./updatepro.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class LoginPage implements OnInit {
-  isTypePassword: boolean = true;
+export class UpdateproPage implements OnInit {
+
   constructor( public router: Router,) {}
 
 
-  inscription(){
-    this.router.navigate(["/inscription"])
+  retour(){
+    this.router.navigate(["/tabs/tabs/tab3"])
   }
-
   ngOnInit() {
   }
-  connexion(form :NgForm){
 
-  }
-  onChange() {
-    this.isTypePassword = !this.isTypePassword;
-  }
 }

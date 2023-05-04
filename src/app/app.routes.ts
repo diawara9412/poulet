@@ -22,4 +22,12 @@ export const routes: Routes = [
     redirectTo: 'tabs',
     pathMatch: 'full',
   },
+  {
+    path: 'detail/:id',
+    loadComponent: () => import('./detail/detail.page').then( m => m.DetailPage)
+  },
+  {
+    path: 'updatepro',
+    loadComponent: () => import('./updatepro/updatepro.page').then( m => m.UpdateproPage)
+  },
 ];

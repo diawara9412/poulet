@@ -1,25 +1,31 @@
 <ion-content [fullscreen]="true">
-  <div class="circleBase type2 circle1"></div>
-  <div class="circleBase type1"></div>
+  <!-- <div class="circleBase type2 circle1"></div>
+  <div class="circleBase type1"></div> -->
   <!-- <div class="circleBase type2 circle2"></div> -->
-
+  <div>
+    <img style="width: 200px; display: block; margin: auto;" src="assets/images/poulet2.png" />
+  </div>
   
 
-  <ion-label class="welcomeMessage">
+  <!-- <ion-label class="welcomeMessage">
     <ion-text color="light">Welcome Back,</ion-text> 
     <ion-text color="white">
       <p>Log In!</p>
     </ion-text>
-  </ion-label> 
+  </ion-label>  -->
   <!-- <div >
     <img width="20px" src="assets/images/poulet1.png" />
   </div> -->
 
-  <form >
+  
     <ion-list lines="none" class=" ion-padding ion-text-center">
+      
+        <!-- <ion-card class="" style="box-shadow: #38270fe5 0px 3px 8px; display: block; margin: auto; width: 50%; ">
+          <ion-card-content> -->
+            <form >
       <ion-item >
         <ion-icon 
-          name="mail-outline" slot="end" color="medium">
+          name="mail-outline" slot="end" color="primary">
         </ion-icon>
         <ion-input 
           
@@ -37,7 +43,7 @@
         <ion-icon (click)="onChange()"
           [name]="isTypePassword ? 'lock-closed-outline' : 'lock-open-outline'" 
           slot="end" 
-          [color]="isTypePassword ? 'medium' : 'primary'">
+          [color]="isTypePassword ? 'primary' : 'primary'">
         </ion-icon>
         <ion-input 
           
@@ -65,21 +71,24 @@
         
         
           <div align=right>
-            <ion-note>Forgot password?</ion-note>
+            <ion-note>Mot de passe oublier?</ion-note>
           </div>
        
       </ion-row>
       <ion-button color="primary"  
-      expand="block"  >Log In</ion-button>
+      expand="block"  >Connexion</ion-button>
       
       <p class="signup">
         <ion-note>
-          Not a member yet? <ion-text routerLink="/home/signup" color="primary">Sign Up</ion-text>
+          Si vous n'avez pas de compte? <ion-text (click)="inscription()" color="primary">Creer compte</ion-text>
         </ion-note>
       </p>
+    </form>
+  <!-- </ion-card-content>
+</ion-card> -->
     </ion-list>
    
-  </form>
+  
 </ion-content>
 <ion-footer>
   <div class="circleBase type4 circle3"></div>

@@ -1,0 +1,71 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  
+  <ion-header >
+  <ion-toolbar>
+    <ion-buttons (click)="retour()" slot="start" >
+      <ion-icon slot="icon-only" name="arrow-back-outline" ></ion-icon>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Modification
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ 
+  <div class="lo">
+    <img src="assets/images/icons8-user-64.png">
+  </div>
+    <form  class="ion-margin"  >
+      <ion-card  style="border-radius: 20px; margin-top: 30px;">
+        <ion-card-content>
+      <div>
+        <ion-note>Nom d'utilisateur <span class="etoile">*</span></ion-note>
+        <ion-item lines="full">
+          <ion-input   type="text"  pattern="[A-Za-z]{2,20}"></ion-input>
+        </ion-item>
+           
+      </div>
+      <div>
+        <ion-note>Sexe <span class="etoile">*</span></ion-note>
+    <ion-item>
+      <ion-label>Profile</ion-label>
+      <ion-select name="sexe">
+        <ion-select-option value="VENDEUR">VENDEUR</ion-select-option>
+        <ion-select-option value="ACHETEUR">ACHETEUR</ion-select-option>
+      </ion-select>
+    </ion-item>
+      </div>
+      <div>
+        <ion-note>Adresse <span class="etoile">*</span></ion-note>
+        <ion-item lines="full">
+          <ion-input   type="text"  pattern="[A-Za-z]{2,20}"></ion-input>
+        </ion-item>
+           
+      </div>
+      <div>
+        <ion-note>Numero de telephone <span class="etoile">*</span></ion-note>
+        <ion-item lines="full">
+          <ion-input   type="number"  pattern="[A-Za-z]{2,20}"></ion-input>
+        </ion-item>
+           
+      </div>
+    </ion-card-content>
+    </ion-card>
+    <ion-button expand="block" style="margin: 15px; margin-top: 20px; margin-left: 20px; margin-right: 20px; border-radius: 20px;">Modifier</ion-button>
+    </form>
+    
+  
+  
+  
+  
+
+
+</ion-content>
