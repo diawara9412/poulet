@@ -1,9 +1,32 @@
-import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiserviceService {
+
+  url = 'http://localhost:8080/api/'
+
+  constructor(private http: HttpClient) {
+  }
+
+
+  addProduitDeclarer(data: any, pdf: any): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append("file", pdf);
+    return this.http.post(this.url + "addProduit", formData);
+  }
+
+  uploadImage(data: any, blobData: string | Blob, name: string | Blob, ext: any): Observable<any> {
+    const formData = new FormData();
+    formData.append('file', blobData, `myimage.${ext}`);
+    formData.append('name', name);
+
+    return this.http.post(this.url + "addProduit", formData);
+  }
+
   allRestaurants = [
     {
       id: '1',
@@ -49,16 +72,16 @@ export class ApiserviceService {
       price: 100
     },
   ];
-  
-  categories = [      
-    { id: 1, name: 'North Indian', image: 'assets/dishes/nan.jpg' },
-    { id: 2, name: 'Italian', image: 'assets/dishes/pasta.jpg' },
-    { id: 3, name: 'Chinese', image: 'assets/dishes/chowmein.jpg' },
-    { id: 4, name: 'South Indian', image: 'assets/dishes/dosa.jpg' },
-    { id: 5, name: 'Mexican', image: 'assets/dishes/dol.jpg' },
+
+  categories = [
+    {id: 1, name: 'North Indian', image: 'assets/dishes/nan.jpg'},
+    {id: 2, name: 'Italian', image: 'assets/dishes/pasta.jpg'},
+    {id: 3, name: 'Chinese', image: 'assets/dishes/chowmein.jpg'},
+    {id: 4, name: 'South Indian', image: 'assets/dishes/dosa.jpg'},
+    {id: 5, name: 'Mexican', image: 'assets/dishes/dol.jpg'},
   ];
 
-  allItems = [    
+  allItems = [
     {
       category_id: "1",
       cover: "assets/dishes/4.jpeg",
@@ -86,44 +109,44 @@ export class ApiserviceService {
       veg: true
     },
     {
-        category_id: "2",
-        cover: "assets/dishes/17.jpeg",
-        desc: "Great in taste",
-        id: "3",
-        name: "Burger",
-        price: 150,
-        rating: 0,
-        status: true,
-        uid: "1",
-        variation: false,
-        veg: false
+      category_id: "2",
+      cover: "assets/dishes/17.jpeg",
+      desc: "Great in taste",
+      id: "3",
+      name: "Burger",
+      price: 150,
+      rating: 0,
+      status: true,
+      uid: "1",
+      variation: false,
+      veg: false
     },
     {
-        category_id: "1",
-        cover: "assets/dishes/nan.jpg",
-        desc: "Great in taste",
-        id: "4",
-        name: "Nan Paneer",
-        price: 200,
-        rating: 0,
-        status: true,
-        uid: "1",
-        variation: false,
-        veg: true
+      category_id: "1",
+      cover: "assets/dishes/nan.jpg",
+      desc: "Great in taste",
+      id: "4",
+      name: "Nan Paneer",
+      price: 200,
+      rating: 0,
+      status: true,
+      uid: "1",
+      variation: false,
+      veg: true
     },
     {
-        category_id: "2",
-        cover: "assets/dishes/pasta.jpg",
-        desc: "Great in taste",
-        id: "5",
-        name: "Pasta",
-        price: 250,
-        rating: 0,
-        status: true,
-        uid: "1",
-        variation: false,
-        veg: false
-    },    
+      category_id: "2",
+      cover: "assets/dishes/pasta.jpg",
+      desc: "Great in taste",
+      id: "5",
+      name: "Pasta",
+      price: 250,
+      rating: 0,
+      status: true,
+      uid: "1",
+      variation: false,
+      veg: false
+    },
     {
       category_id: "3",
       cover: "assets/dishes/chinese2.jpg",
@@ -138,30 +161,30 @@ export class ApiserviceService {
       veg: true
     },
     {
-        category_id: "3",
-        cover: "assets/dishes/chowmein.jpg",
-        desc: "Great in taste",
-        id: "7",
-        name: "Chowmein",
-        price: 200,
-        rating: 0,
-        status: true,
-        uid: "1",
-        variation: false,
-        veg: false
+      category_id: "3",
+      cover: "assets/dishes/chowmein.jpg",
+      desc: "Great in taste",
+      id: "7",
+      name: "Chowmein",
+      price: 200,
+      rating: 0,
+      status: true,
+      uid: "1",
+      variation: false,
+      veg: false
     },
     {
-        category_id: "5",
-        cover: "assets/dishes/fryjpg.jpg",
-        desc: "Great in taste",
-        id: "8",
-        name: "Egg fry",
-        price: 60,
-        rating: 0,
-        status: true,
-        uid: "1",
-        variation: false,
-        veg: true
+      category_id: "5",
+      cover: "assets/dishes/fryjpg.jpg",
+      desc: "Great in taste",
+      id: "8",
+      name: "Egg fry",
+      price: 60,
+      rating: 0,
+      status: true,
+      uid: "1",
+      variation: false,
+      veg: true
     },
     {
       category_id: "5",
@@ -203,5 +226,5 @@ export class ApiserviceService {
       veg: true
     },
   ];
-  constructor() { }
+
 }

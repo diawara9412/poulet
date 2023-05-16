@@ -1,5 +1,7 @@
 {
   "name": "poulet",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

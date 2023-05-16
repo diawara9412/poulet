@@ -29,5 +29,9 @@ export const routes: Routes = [
   {
     path: 'updatepro',
     loadComponent: () => import('./updatepro/updatepro.page').then( m => m.UpdateproPage)
+  },  {
+    path: 'upload',
+    loadComponent: () => import('./upload/upload.page').then( m => m.UploadPage)
   },
+
 ];

@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Take Screenshot / Picture
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="img" align="center">
+    <img [src]="imageSrc" *ngIf="imageSrc">
+    <ion-icon *ngIf="!imageSrc" name="images-outline"></ion-icon>
+  </div>
+
+  <ion-row>
+
+    <!-- <ion-button expand="block" style="display: block; margin: auto;" (click)="takePicture()">
+      Choisir ou prendre une photo
+    </ion-button> -->
+
+    <!-- <ion-col size="6">
+      <ion-button expand="block" (click)="takeScreenshot()">
+        Take A Screenshot
+      </ion-button>
+    </ion-col> -->
+  </ion-row>
+  <form class="ion-margin">
+    <ion-card style="border-radius: 20px; margin-top: 30px;">
+      <ion-card-content>
+        <div>
+          <ion-note>Nom Poulet<span class="etoile">*</span></ion-note>
+          <ion-item lines="full">
+            <ion-input type="text" pattern="[A-Za-z]{2,20}"></ion-input>
+          </ion-item>
+
+        </div>
+        <div>
+          <ion-note>Quantité<span class="etoile">*</span></ion-note>
+          <ion-item lines="full">
+            <ion-input type="number" pattern="[A-Za-z]{2,20}"></ion-input>
+          </ion-item>
+
+        </div>
+        <div>
+        <ion-item>
+          <ion-label>Categorie</ion-label>
+          <ion-select name="sexe">
+            <ion-select-option value="VENDEUR">Poulet</ion-select-option>
+            <ion-select-option value="ACHETEUR">Oeuf</ion-select-option>
+            <ion-select-option value="ACHETEUR">Alimentation</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-button expand="block"
+                style="margin: 15px; margin-top: 20px; margin-left: 20px; margin-right: 20px; border-radius: 20px;"
+                (click)="ajouter()">Ajouter
+    </ion-button>
+  </form>
+  <!-- <input
+  type="file"
+  #fileInput
+  (change)="chargephoto(fileInput.files)"
+
+/> -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <!-- <input
+      type="file"
+      #fileInput
+      (change)="chargephoto(fileInput.files)"
+      hidden="true"
+      accept="image/*"
+    /> -->
+    <ion-fab-button (click)="selectImageSource()">
+      <ion-icon name="image"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
